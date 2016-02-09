@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=PIC_StopLight.X
+PROJECTNAME=PIC_ParkingAsst.X
 
 # Active Configuration
 DEFAULTCONF=default

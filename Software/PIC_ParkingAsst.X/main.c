@@ -27,10 +27,10 @@
 #define state_YELLOW 1
 #define state_GREEN 2
 
-#define dx1 100
-#define dx2 180
-#define dx3 205
-#define dx4 285
+#define dx1 80      //Entering: Yellow Off; Red On
+#define dx2 140     //Exiting:  Yellow On; Red Off
+#define dx3 275     //Entering: Green Off; Yellow On
+#define dx4 305     //Exiting:  Green On; Yellow Off
 
 #pragma config OSC = INTIO67
 #pragma config WDT = OFF  
@@ -159,9 +159,9 @@ int checkDistance(void) {
    
         delay_timer();
         delay_timer();
-        delay_timer();
-        delay_timer();
-        delay_timer();
+        //delay_timer();
+        //delay_timer();
+        //delay_timer();
     }
     
     for (int ctr2 = 0; ctr2 < 10; ctr2++) {

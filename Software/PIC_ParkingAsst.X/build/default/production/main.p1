@@ -2776,9 +2776,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 68: distance = checkDistance();
 "68
 [e = _distance -> ( _checkDistance ..  `ui ]
-[; ;main.c: 70: if (distance < 180) {
+[; ;main.c: 70: if (distance < 140) {
 "70
-[e $ ! < _distance -> -> 180 `i `ui 302  ]
+[e $ ! < _distance -> -> 140 `i `ui 302  ]
 {
 [; ;main.c: 71: setRedLight();
 "71
@@ -2792,8 +2792,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 303  ]
 "74
 [e :U 302 ]
-[; ;main.c: 74: else if (distance > 285) {
-[e $ ! > _distance -> -> 285 `i `ui 304  ]
+[; ;main.c: 74: else if (distance > 305) {
+[e $ ! > _distance -> -> 305 `i `ui 304  ]
 {
 [; ;main.c: 75: setGreenLight();
 "75
@@ -2834,9 +2834,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 87: case 0:
 "87
 [e :U 311 ]
-[; ;main.c: 88: if (distance > 180) {
+[; ;main.c: 88: if (distance > 140) {
 "88
-[e $ ! > _distance -> -> 180 `i `ui 312  ]
+[e $ ! > _distance -> -> 140 `i `ui 312  ]
 {
 [; ;main.c: 89: setYellowLight();
 "89
@@ -2854,9 +2854,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 93: case 1:
 "93
 [e :U 313 ]
-[; ;main.c: 94: if (distance <= 100) {
+[; ;main.c: 94: if (distance <= 80) {
 "94
-[e $ ! <= _distance -> -> 100 `i `ui 314  ]
+[e $ ! <= _distance -> -> 80 `i `ui 314  ]
 {
 [; ;main.c: 95: setRedLight();
 "95
@@ -2870,8 +2870,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 315  ]
 "98
 [e :U 314 ]
-[; ;main.c: 98: else if (distance > 285) {
-[e $ ! > _distance -> -> 285 `i `ui 316  ]
+[; ;main.c: 98: else if (distance > 305) {
+[e $ ! > _distance -> -> 305 `i `ui 316  ]
 {
 [; ;main.c: 99: setGreenLight();
 "99
@@ -2890,9 +2890,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 103: case 2:
 "103
 [e :U 317 ]
-[; ;main.c: 104: if (distance <= 205) {
+[; ;main.c: 104: if (distance <= 275) {
 "104
-[e $ ! <= _distance -> -> 205 `i `ui 318  ]
+[e $ ! <= _distance -> -> 275 `i `ui 318  ]
 {
 [; ;main.c: 105: setYellowLight();
 "105
@@ -3069,15 +3069,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _delay_timer ..  ]
 [; ;main.c: 161: delay_timer();
 "161
-[e ( _delay_timer ..  ]
-[; ;main.c: 162: delay_timer();
-"162
-[e ( _delay_timer ..  ]
-[; ;main.c: 163: delay_timer();
-"163
-[e ( _delay_timer ..  ]
-[; ;main.c: 164: delay_timer();
-"164
 [e ( _delay_timer ..  ]
 "165
 }

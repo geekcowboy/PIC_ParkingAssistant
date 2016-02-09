@@ -3508,11 +3508,11 @@ TRISBbits.TRISB3 = 0;
 
 distance = checkDistance();
 
-if (distance < 180) {
+if (distance < 140) {
 setRedLight();
 state_CURRENT = 0;
 }
-else if (distance > 285) {
+else if (distance > 305) {
 setGreenLight();
 state_CURRENT = 2;
 }
@@ -3526,23 +3526,23 @@ distance = checkDistance();
 
 switch(state_CURRENT) {
 case 0:
-if (distance > 180) {
+if (distance > 140) {
 setYellowLight();
 state_CURRENT = 1;
 }
 break;
 case 1:
-if (distance <= 100) {
+if (distance <= 80) {
 setRedLight();
 state_CURRENT = 0;
 }
-else if (distance > 285) {
+else if (distance > 305) {
 setGreenLight();
 state_CURRENT = 2;
 }
 break;
 case 2:
-if (distance <= 205) {
+if (distance <= 275) {
 setYellowLight();
 state_CURRENT = 1;
 }
@@ -3600,9 +3600,9 @@ distance[ctr] = (unsigned)Tm;
 
 delay_timer();
 delay_timer();
-delay_timer();
-delay_timer();
-delay_timer();
+
+
+
 }
 
 for (int ctr2 = 0; ctr2 < 10; ctr2++) {

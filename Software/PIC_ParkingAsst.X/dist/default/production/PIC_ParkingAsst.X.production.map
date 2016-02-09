@@ -3,25 +3,26 @@ Microchip MPLAB XC8 Compiler V1.36 ()
 Linker command line:
 
 -W-3 --edf=/Applications/microchip/xc8/v1.36/dat/en_msgs.txt -cs \
-  -h+dist/default/production/PIC_StopLight.X.production.sym \
-  --cmf=dist/default/production/PIC_StopLight.X.production.cmf -z -Q18F2520 \
-  -o/tmp/xcibL80M1 -Mdist/default/production/PIC_StopLight.X.production.map \
-  -E1 -ver=XC8 -ASTACK=080h-05ffh -pstack=STACK -ACODE=00h-07FFFh \
-  -ACONST=00h-07FFFh -ASMALLCONST=0600h-06FFhx122 \
-  -AMEDIUMCONST=0600h-07FFFh -ACOMRAM=01h-07Fh -AABS1=00h-05FFh \
-  -ABIGRAM=01h-05FFh -ARAM=080h-0FFh,0100h-01FFhx5 -ABANK0=080h-0FFh \
-  -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh -ABANK3=0300h-03FFh \
-  -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh -ASFR=0F80h-0FFFh \
-  -preset_vec=00h,intcode,intcodelo,powerup,init,end_init -pramtop=0600h \
-  -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST -pconst=CONST \
-  -AFARRAM=00h-00h -ACONFIG=0300000h-030000Dh -pconfig=CONFIG \
+  -h+dist/default/production/PIC_ParkingAsst.X.production.sym \
+  --cmf=dist/default/production/PIC_ParkingAsst.X.production.cmf -z \
+  -Q18F2520 -o/tmp/xcGnmvXzF \
+  -Mdist/default/production/PIC_ParkingAsst.X.production.map -E1 -ver=XC8 \
+  -ASTACK=080h-05ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
+  -ASMALLCONST=0600h-06FFhx122 -AMEDIUMCONST=0600h-07FFFh -ACOMRAM=01h-07Fh \
+  -AABS1=00h-05FFh -ABIGRAM=01h-05FFh -ARAM=080h-0FFh,0100h-01FFhx5 \
+  -ABANK0=080h-0FFh -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh \
+  -ABANK3=0300h-03FFh -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh \
+  -ASFR=0F80h-0FFFh -preset_vec=00h,intcode,intcodelo,powerup,init,end_init \
+  -pramtop=0600h -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST \
+  -pconst=CONST -AFARRAM=00h-00h -ACONFIG=0300000h-030000Dh -pconfig=CONFIG \
   -AIDLOC=0200000h-0200007h -pidloc=IDLOC -AEEDATA=0F00000h-0F000FFh \
   -peeprom_data=EEDATA \
   -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  /tmp/xcFJSyWBq.obj dist/default/production/PIC_StopLight.X.production.obj 
+  /tmp/xc61TjMwb.obj \
+  dist/default/production/PIC_ParkingAsst.X.production.obj 
 
 Object code version is 3.11
 
@@ -33,38 +34,38 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcFJSyWBq.obj
+/tmp/xc61TjMwb.obj
                 end_init                              0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
-dist/default/production/PIC_StopLight.X.production.obj
-                text8                              7CD4     7CD4       82     3E6A       0
-                text7                              7C7E     7C7E       56     3E3F       0
-                text6                              7C2C     7C2C       52     3E16       0
-                text5                              7C0E     7C0E       1E     3E07       0
-                text4                              7E5C     7E5C      1A4     3F2E       0
-                text3                              7BEC     7BEC        8     3DF6       0
-                text2                              7BF4     7BF4        8     3DFA       0
-                text1                              7BFC     7BFC        8     3DFE       0
-                text0                              7D56     7D56      106     3EAB       0
+dist/default/production/PIC_ParkingAsst.X.production.obj
+                text8                              7CE0     7CE0       82     3E70       0
+                text7                              7C8A     7C8A       56     3E45       0
+                text6                              7C38     7C38       52     3E1C       0
+                text5                              7C1A     7C1A       1E     3E0D       0
+                text4                              7E68     7E68      198     3F34       0
+                text3                              7BF8     7BF8        8     3DFC       0
+                text2                              7C00     7C00        8     3E00       0
+                text1                              7C08     7C08        8     3E04       0
+                text0                              7D62     7D62      106     3EB1       0
                 cstackCOMRAM                          1        1       39        1       1
-                cinit                              7C04     7C04        A     3E02       0
+                cinit                              7C10     7C10        A     3E08       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 end_init                              0        0        4         0
-                text8                              7CD4     7CD4       82         0
-                text7                              7C7E     7C7E       56         0
-                text6                              7C2C     7C2C       52         0
-                text5                              7C0E     7C0E       1E         0
-                text4                              7E5C     7E5C      1A4         0
-                text3                              7BEC     7BEC        8         0
-                text2                              7BF4     7BF4        8         0
-                text1                              7BFC     7BFC        8         0
-                text0                              7D56     7D56      106         0
-                cinit                              7C04     7C04        A         0
+                text8                              7CE0     7CE0       82         0
+                text7                              7C8A     7C8A       56         0
+                text6                              7C38     7C38       52         0
+                text5                              7C1A     7C1A       1E         0
+                text4                              7E68     7E68      198         0
+                text3                              7BF8     7BF8        8         0
+                text2                              7C00     7C00        8         0
+                text1                              7C08     7C08        8         0
+                text0                              7D62     7D62      106         0
+                cinit                              7C10     7C10        A         0
 
         CLASS   CONST          
 
@@ -111,16 +112,16 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
                 cstackCOMRAM                   000001  000039  00003A         1       1  COMRAM  
-                text3                          007BEC  000008  007BF4      3DF6       0  CODE    
-                text2                          007BF4  000008  007BFC      3DFA       0  CODE    
-                text1                          007BFC  000008  007C04      3DFE       0  CODE    
-                cinit                          007C04  00000A  007C0E      3E02       0  CODE    
-                text5                          007C0E  00001E  007C2C      3E07       0  CODE    
-                text6                          007C2C  000052  007C7E      3E16       0  CODE    
-                text7                          007C7E  000056  007CD4      3E3F       0  CODE    
-                text8                          007CD4  000082  007D56      3E6A       0  CODE    
-                text0                          007D56  000106  007E5C      3EAB       0  CODE    
-                text4                          007E5C  0001A4  008000      3F2E       0  CODE    
+                text3                          007BF8  000008  007C00      3DFC       0  CODE    
+                text2                          007C00  000008  007C08      3E00       0  CODE    
+                text1                          007C08  000008  007C10      3E04       0  CODE    
+                cinit                          007C10  00000A  007C1A      3E08       0  CODE    
+                text5                          007C1A  00001E  007C38      3E0D       0  CODE    
+                text6                          007C38  000052  007C8A      3E1C       0  CODE    
+                text7                          007C8A  000056  007CE0      3E45       0  CODE    
+                text8                          007CE0  000082  007D62      3E70       0  CODE    
+                text0                          007D62  000106  007E68      3EB1       0  CODE    
+                text4                          007E68  000198  008000      3F34       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -135,14 +136,14 @@ UNUSED ADDRESS RANGES
         BANK4            000400-0004FF              100
         BANK5            000500-0005FF              100
         BIGRAM           00003A-0005FF              5C6
-        CODE             000004-007BEB             7BE8
+        CODE             000004-007BF7             7BF4
         COMRAM           00003A-00007F               46
-        CONST            000004-007BEB             7BE8
+        CONST            000004-007BF7             7BF4
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      000600-007BEB             75EC
+        MEDIUMCONST      000600-007BF7             75F8
         RAM              000080-0005FF              100
         SFR              000F80-000FFF               80
-        SMALLCONST       000600-007BEB              100
+        SMALLCONST       000600-007BF7              100
         STACK            000080-0005FF              580
 
                                   Symbol Table
@@ -307,16 +308,16 @@ __S1                      (abs)        00003A
 __S2                      (abs)        000000
 ___inthi_sp               stack        000000
 ___intlo_sp               stack        000000
-___lldiv                  text8        007CD4
+___lldiv                  text8        007CE0
 ___lldiv@counter          cstackCOMRAM 00000D
 ___lldiv@dividend         cstackCOMRAM 000001
 ___lldiv@divisor          cstackCOMRAM 000005
 ___lldiv@quotient         cstackCOMRAM 000009
-___lmul                   text7        007C7E
+___lmul                   text7        007C8A
 ___lmul@multiplicand      cstackCOMRAM 000005
 ___lmul@multiplier        cstackCOMRAM 000001
 ___lmul@product           cstackCOMRAM 000009
-___lwdiv                  text6        007C2C
+___lwdiv                  text6        007C38
 ___lwdiv@counter          cstackCOMRAM 000007
 ___lwdiv@dividend         cstackCOMRAM 000001
 ___lwdiv@divisor          cstackCOMRAM 000003
@@ -326,29 +327,29 @@ ___rparam_used            (abs)        000001
 ___sp                     stack        000000
 __accesstop               (abs)        000080
 __activetblptr            (abs)        000002
-__end_of___lldiv          text8        007D56
-__end_of___lmul           text7        007CD4
-__end_of___lwdiv          text6        007C7E
-__end_of__initialization  cinit        007C04
+__end_of___lldiv          text8        007D62
+__end_of___lmul           text7        007CE0
+__end_of___lwdiv          text6        007C8A
+__end_of__initialization  cinit        007C10
 __end_of_checkDistance    text4        008000
-__end_of_delay_timer      text5        007C2C
-__end_of_main             text0        007E5C
-__end_of_setGreenLight    text3        007BF4
-__end_of_setRedLight      text2        007BFC
-__end_of_setYellowLight   text1        007C04
-__initialization          cinit        007C04
+__end_of_delay_timer      text5        007C38
+__end_of_main             text0        007E68
+__end_of_setGreenLight    text3        007C00
+__end_of_setRedLight      text2        007C08
+__end_of_setYellowLight   text1        007C10
+__initialization          cinit        007C10
 __mediumconst             mediumconst  000000
-__pcinit                  cinit        007C04
+__pcinit                  cinit        007C10
 __pcstackCOMRAM           cstackCOMRAM 000001
-__ptext0                  text0        007D56
-__ptext1                  text1        007BFC
-__ptext2                  text2        007BF4
-__ptext3                  text3        007BEC
-__ptext4                  text4        007E5C
-__ptext5                  text5        007C0E
-__ptext6                  text6        007C2C
-__ptext7                  text7        007C7E
-__ptext8                  text8        007CD4
+__ptext0                  text0        007D62
+__ptext1                  text1        007C08
+__ptext2                  text2        007C00
+__ptext3                  text3        007BF8
+__ptext4                  text4        007E68
+__ptext5                  text5        007C1A
+__ptext6                  text6        007C38
+__ptext7                  text7        007C8A
+__ptext8                  text8        007CE0
 __ramtop                  ramtop       000600
 __size_of___lldiv         (abs)        000000
 __size_of___lmul          (abs)        000000
@@ -360,12 +361,12 @@ __size_of_setGreenLight   (abs)        000000
 __size_of_setRedLight     (abs)        000000
 __size_of_setYellowLight  (abs)        000000
 __smallconst              smallconst   000000
-_checkDistance            text4        007E5C
-_delay_timer              text5        007C0E
-_main                     text0        007D56
-_setGreenLight            text3        007BEC
-_setRedLight              text2        007BF4
-_setYellowLight           text1        007BFC
+_checkDistance            text4        007E68
+_delay_timer              text5        007C1A
+_main                     text0        007D62
+_setGreenLight            text3        007BF8
+_setRedLight              text2        007C00
+_setYellowLight           text1        007C08
 checkDistance@Th          cstackCOMRAM 000029
 checkDistance@Tl          cstackCOMRAM 000028
 checkDistance@Tm          cstackCOMRAM 000030
@@ -374,7 +375,7 @@ checkDistance@ctr         cstackCOMRAM 00002C
 checkDistance@ctr2        cstackCOMRAM 00002E
 checkDistance@distance    cstackCOMRAM 000014
 delay_timer@i             cstackCOMRAM 000001
-end_of_initialization     cinit        007C04
+end_of_initialization     cinit        007C10
 intlevel0                 text         000000
 intlevel1                 text         000000
 intlevel2                 text         000000
@@ -384,7 +385,7 @@ main@state_CURRENT        cstackCOMRAM 000036
 stackhi                   (abs)        0005FF
 stacklo                   (abs)        000080
 start                     init         000000
-start_initialization      cinit        007C04
+start_initialization      cinit        007C10
 
 
 FUNCTION INFORMATION:
@@ -674,32 +675,32 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 shared
-		__initialization		CODE           	7C04	0000	1
+		__initialization		CODE           	7C10	0000	1
 
 shared estimated size: 1
 
 /Applications/microchip/xc8/v1.36/sources/common/lwdiv.c
-		___lwdiv       		CODE           	7C2C	0000	83
+		___lwdiv       		CODE           	7C38	0000	83
 
 /Applications/microchip/xc8/v1.36/sources/common/lwdiv.c estimated size: 83
 
 main.c
-		_setYellowLight		CODE           	7BFC	0000	9
-		_main          		CODE           	7D56	0000	263
-		_checkDistance 		CODE           	7E5C	0000	421
-		_setGreenLight 		CODE           	7BEC	0000	9
-		_setRedLight   		CODE           	7BF4	0000	9
-		_delay_timer   		CODE           	7C0E	0000	31
+		_setYellowLight		CODE           	7C08	0000	9
+		_main          		CODE           	7D62	0000	263
+		_checkDistance 		CODE           	7E68	0000	409
+		_setGreenLight 		CODE           	7BF8	0000	9
+		_setRedLight   		CODE           	7C00	0000	9
+		_delay_timer   		CODE           	7C1A	0000	31
 
-main.c estimated size: 742
+main.c estimated size: 730
 
 /Applications/microchip/xc8/v1.36/sources/common/Umul32.c
-		___lmul        		CODE           	7C7E	0000	87
+		___lmul        		CODE           	7C8A	0000	87
 
 /Applications/microchip/xc8/v1.36/sources/common/Umul32.c estimated size: 87
 
 /Applications/microchip/xc8/v1.36/sources/common/lldiv.c
-		___lldiv       		CODE           	7CD4	0000	131
+		___lldiv       		CODE           	7CE0	0000	131
 
 /Applications/microchip/xc8/v1.36/sources/common/lldiv.c estimated size: 131
 
