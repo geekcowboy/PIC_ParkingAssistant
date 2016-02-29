@@ -2,36 +2,47 @@
  * File:   main.c
  *
  * Created on February 3, 2016, 8:13 PM
+ * 
+ * The Parking Assistant replaces the old "tennis ball on a string"
+ * to help you properly park your car in a garage.
  */
 
 
+// Include the necessary libraries
 #include <xc.h>
 #include <p18f2520.h>
 
-#define _XTAL_FREQ 8000000
+#define _XTAL_FREQ 8000000      //Set clock frequency
 
+//Configure pin B0 for PING sensor
 #define pingUS LATBbits.LATB0
 #define pingDir TRISBbits.TRISB0
 #define pingIn PORTBbits.RB0
 
+//Configure pin B1 for green LED
 #define greenLED LATBbits.LATB1
 #define greenLEDDir TRISBbits.TRISB1
 
+//Configure pin B1 for yellow LED
 #define yellowLED LATBbits.LATB2
 #define yellowLEDDir TRISBbits.TRISB2
 
+//Configure pin B1 for red LED
 #define redLED LATBbits.LATB3
 #define redLEDDir TRISBbits.TRISB3
 
+//Define transition states
 #define state_RED 0
 #define state_YELLOW 1
 #define state_GREEN 2
 
+//Define distances for state transitions
 #define dx1 80      //Entering: Yellow Off; Red On
 #define dx2 140     //Exiting:  Yellow On; Red Off
 #define dx3 275     //Entering: Green Off; Yellow On
 #define dx4 305     //Exiting:  Green On; Yellow Off
 
+//Set microcontroller configuration bits
 #pragma config OSC = INTIO67
 #pragma config WDT = OFF  
 #pragma config LVP = OFF   
@@ -44,7 +55,12 @@ void setGreenLight(void);
 void setYellowLight(void);
 void setRedLight(void);
 
-
+/* Function: main
+*
+* Take a distance reading.
+* Based on current state and distance reading
+* determine if a state transition is necessary
+*/
 void main() {
     
     unsigned int state_CURRENT = state_RED;
